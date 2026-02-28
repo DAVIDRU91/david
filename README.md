@@ -1,6 +1,6 @@
 # david
 title: david
-description: <!DOCTYPE html>
+description: 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
