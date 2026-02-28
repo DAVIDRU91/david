@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORRES</title>
+</head>
+<body> 
+    <h1><CEnter><span style="color: #ECF40B;"><h2>TORRES</h2></span></CEnter></h1>    
+    <HR>
+        <div class="carousel-container">
+    <div class="carousel-slide">
+    
+<img src="IMAGENES TORRES/61kePNBZASL._AC_SL1500_.jpg"  class="active">
+        <img src="IMAGENES TORRES/51mjyYKLstL._AC_SL1000_.jpg" >
+        <img src="IMAGENES TORRES/61o3xW2rmsL._AC_SL1500_.jpg" >
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button> 
+</div>
+<div class="parrafos">
+    <p>Dell OptiPlex 5050 SFF PC de escritorio, 3.4GHz Intel i5-7500, <br> RAM, 256GB SSD, Windows 11 Pro 64 bits (reacondicionado)</p> 
+                                <!--cambiar color letra x letra-->                                                                        <!--separar un poco hacia la derecha-->
+    <div class="wd"><p>Precio <span style="color:blue">U</span><span style="color: red;">S</span><span style="color:white;">D</span><span style="margin-left: 10px;" style="color:rgb(28, 255, 28);">$</span><span style="color: rgb(255, 255, 255);">209.99</span></p></div>
+</div>
+<TABle>
+    <TR>
+<TD>
+        <BR>
+<a href="https://amzn.to/4cPnIem" class="texto">¡PARA MÁS INFORMACIÓN, AQUÍ!</a></div>
+</TD>
+</TR>
+</TABle>
+<style>  
+.wd
+{
+color: rgb(81, 236, 9);
+
+}
+
+body
+{
+/* pon en la URL () la ruta de tu imagen */
+    background-image: url('IMAGENES/fondo/fono.jpg'); 
+    
+    /* Hace que la imagen no se repita */
+    background-repeat: no-repeat; 
+    
+    /* Fija la imagen para que no se mueva al hacer scroll */
+    background-attachment: fixed; 
+    
+    /* Hace que la imagen cubra toda la pantalla */
+    background-size: cover; 
+    
+    /* Centra la imagen */
+    background-position: center;
+}
+.parrafos
+{
+/*color del fondo y texto*/ 
+background-color: rgb(0, 0, 0);
+padding: 10px;
+display: inline-block;
+color:rgb(240, 240, 240);
+border-radius: 10px;   
+/*que tanto sera la raya larga que aparece con el parrafo*/
+font-size: 18px
+}
+ .texto 
+  {
+background-color: aqua; /*esto lo hice yo despues de ver como se hace*/
+color:black;
+/*espacio abajo 10px y espacio a un lado 0*/
+margin: 0px 0;
+/*que tan grande el fondo*/
+padding: 15px;  
+border-radius: 10px;   
+text-decoration: none;
+font-size: 18px
+}
+  .carousel-container {
+        position:relative;
+        max-width: 400px; /* Ajusta el tamaño que quieras */
+        margin:3ch;
+        overflow: hidden;
+        border: 5px solid #ECF40B; /* Color amarillo de tu diseño */
+    }
+    .carousel-slide img {
+        width: 100%;
+        display: none; /* Ocultamos todas por defecto */
+    height: 300px; /* Define una altura fija para que todas sean iguales */   
+}
+    .carousel-slide img.active {
+        display: block; /* Solo mostramos la activa */
+    }
+    /* Estilo de los botones */
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        padding: 16px;
+        cursor: pointer;
+        border: none;
+    }
+    .next { right: 0; }
+    .prev { left: 0; }
+</style>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".carousel-slide img");
+    function changeSlide(direction) {
+        // Quitamos la visibilidad a la imagen actual
+        slides[currentSlide].classList.remove("active");
+        // Calculamos el nuevo índice
+        currentSlide += direction;
+        // Si llegamos al final, volvemos al inicio
+        if (currentSlide >= slides.length) { currentSlide = 0; }
+        // Si retrocedemos desde la primera, vamos a la última
+        if (currentSlide < 0) { currentSlide = slides.length - 1; }
+        // Mostramos la nueva imagen
+        slides[currentSlide].classList.add("active");
+    }
+</script>
+</body>
+</html>
